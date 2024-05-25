@@ -1,0 +1,18 @@
+@import "./responsive.scss";
+
+.layout {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+
+
+  @include lg {
+  }
+
+  @include md {
+  }
+
+  @include sm {
+  }
+}
