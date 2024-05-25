@@ -50,7 +50,10 @@ function About() {
         <div className="get-started">
           <div className="container">
             <h1>Ready to kick-start your career?</h1>
-            <button>GET STARTED NOW</button>
+            <a href="/Courses">
+              <button>GET STARTED NOW</button>
+            </a>
+
           </div>
         </div>
       </div>
