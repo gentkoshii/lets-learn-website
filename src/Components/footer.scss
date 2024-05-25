@@ -1,5 +1,59 @@
 @import './src/responsive.scss';
 
-ul {
-    list-style-type: none;
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 42vh;
+    gap: 100px;
+    background-color: #332859;
+    h3{
+        color: white;
+    }
+
+    .logo{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 80px;
+        .logo-footer{
+            img{
+                height: 30px;
+            }
+        }
+        .icons{
+            img{
+                padding-left: 15px;
+                height: 15px;
+            }
+        }
+    }
+    .Information{
+        display: flex;
+        padding-top: 80px;
+        gap: 100px;
+        p{
+            display: flex;
+            padding-top: 10px;
+        }
+        a{
+            display: flex;
+            padding-top: 10px;
+            flex-direction: column;
+            padding-right: 5px;
+            &:hover{
+                padding-right: 0px;
+                padding-left: 5px;
+                color: #682d2d;
+                transition: ease .3s;
+            }
+        }
+        .About{
+            a{
+                padding-top: 0px;
+            }
+        }
+    }
 }

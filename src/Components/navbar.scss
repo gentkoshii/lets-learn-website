@@ -1,0 +1,36 @@
+@import './src/responsive.scss';
+
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10vh;
+
+    .logo{
+        img{
+            scale: 0.5;
+        }
+    }
+
+    .link{
+        a{
+            padding:0px 30px 0px 0px;
+            color: #332859;
+            &:hover{
+                color: #332859;
+            }
+            &.active{
+                color: red;
+            }
+        }
+        button{
+            background-color: transparent;
+            border: none;
+            img{
+                height: 18px;
+                width: 18px;
+            }
+        }
+    }
+}
+ 

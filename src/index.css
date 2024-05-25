@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: "Alata", sans-serif;
+}
+a{
+    font-size: 15px;
+    color: #908ca3;
+    text-decoration: none;
+}
+h2{
+    color: #332859;
+}
+p{
+    font-size: 15px;
+    color: #908ca3;
+}
