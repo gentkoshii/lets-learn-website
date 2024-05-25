@@ -1,9 +1,12 @@
 *{
     margin: 0px;
     padding: 0px;
+    
 }
 body{
-    font-family: "Alata", sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-display: swap;
 }
 a{
     font-size: 15px;
