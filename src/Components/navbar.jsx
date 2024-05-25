@@ -3,7 +3,7 @@ function Navbar() {
     return (
       <div>
         <div>
-          <Link href=""><img src="" alt="" /></Link>
+          <Link href="/"><img src="./public/logo.png" alt="Logo" /></Link>
         </div>
         <div>
           <Link to="/" id="Home">Home</Link>
@@ -12,7 +12,7 @@ function Navbar() {
           <Link to="/Instructors" id="Instructors">Instructors</Link>
           <Link to="/Blog" id="Blog">Blog</Link>
           <Link to="/Contact" id="Contact">Contact Us</Link>
-          <button><img src="" alt="" /></button>
+          <button><img src="./public/search-red.png" alt="Search" /></button>
         </div>
       </div>
     )
