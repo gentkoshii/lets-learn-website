@@ -6,12 +6,12 @@ function Navbar() {
           <Link href=""><img src="" alt="" /></Link>
         </div>
         <div>
-          <Link href="">Home</Link>
-          <Link href="">About Us</Link>
-          <Link href="">Courses</Link>
-          <Link href="">Instructors</Link>
-          <Link href="">Blog</Link>
-          <Link href="">Contact Us</Link>
+          <Link to="/" id="Home">Home</Link>
+          <Link to="/About" id="About">About Us</Link>
+          <Link to="/Courses" id="Courses">Courses</Link>
+          <Link to="/Instructors" id="Instructors">Instructors</Link>
+          <Link to="/Blog" id="Blog">Blog</Link>
+          <Link to="/Contact" id="Contact">Contact Us</Link>
           <button><img src="" alt="" /></button>
         </div>
       </div>
