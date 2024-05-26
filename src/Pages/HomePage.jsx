@@ -129,7 +129,7 @@ function Homepage() {
                 <form>
                   <input type="text" placeholder="FIRST NAME*" />
                   <input type="text" placeholder="LAST NAME*" />
-                  <input type="text" placeholder="PHONE*" />
+                  <input type="tel" placeholder="PHONE*" />
                   <input type="email" placeholder="EMAIL*" />
                   <a href="Courses">
                     <button>
