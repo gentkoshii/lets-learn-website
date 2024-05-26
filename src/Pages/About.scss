@@ -22,18 +22,19 @@
         width: 60%;
         margin-left: auto;
         margin-right: auto;
-        padding-top: 10px;
         #p{
             font-weight: 500;
             font-size: 17px;
             color: rgb(115, 115, 115);
         }
         .links{
+            display: flex;
+            align-items: center;
+            height: 5vh;
+            gap: 5px;
             a{
                 color: red;
             }
-            display: flex;
-            gap: 5px;
         }
         .stats{
             display: flex;
@@ -78,6 +79,7 @@
         display: flex;
         gap: 40px;
         color: #332859;
+        padding-bottom: 30px;
         p{
             line-height: 30px;
             text-align: justify;

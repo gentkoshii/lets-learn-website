@@ -53,7 +53,6 @@ function About() {
             <a href="/Courses">
               <button>GET STARTED NOW</button>
             </a>
-
           </div>
         </div>
       </div>

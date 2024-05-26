@@ -1,0 +1,15 @@
+.Blog{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .Intro{
+        background-image:  url(./public/background.jpg) ;
+        background-size: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 35vh;
+        color: #332859;
+    }
+}
