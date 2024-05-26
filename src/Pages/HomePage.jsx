@@ -138,8 +138,9 @@ function Homepage() {
                   </a>
                 </form>
               </div>
-              <img src="./public/clients.png" alt="Clients" />
             </div>
+            <img src="./public/clients.png" alt="Clients" />
+
       </div>
 
       <div className="quotes">
@@ -197,10 +198,10 @@ function Homepage() {
       </div>
 
       <div className="awards">
-            <img src="./public/" alt="Teacher" />
+            <img src="./public/Teacher.png" alt="Teacher" />
             <div className="content">
               <div>
-                <img src="./public/" alt="Achievment" />
+                <img src="./public/badge.png" alt="Achievment" />
                 <div>
                 <h3>National Awards</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis elit vitae enim vehicula fermentum consectetur adipiscing elit.</p>
@@ -208,7 +209,7 @@ function Homepage() {
               </div>
 
               <div>
-                <img src="./public/" alt="Achievment" />
+                <img src="./public/note-pad.png" alt="Courses" />
                 <div>
                 <h3>Many Courses</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis elit vitae enim vehicula fermentum consectetur adipiscing elit.</p>
@@ -216,7 +217,7 @@ function Homepage() {
               </div>
 
               <div>
-                <img src="./public/" alt="Achievment" />
+                <img src="./public/id.png" alt="Certified" />
                 <div>
                 <h3>The Best Instructors</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis elit vitae enim vehicula fermentum consectetur adipiscing elit.</p>
