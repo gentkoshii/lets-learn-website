@@ -23,7 +23,10 @@ function Instructors() {
                 <p>Full Name</p>
                 <p>Available Courses</p>
                 <p>Average Rating</p>
+                
+                <Link to="/">
                 <button id="b">View Course</button>
+                </Link>
                 <h2>John Doe</h2>
                 <h3>12</h3>
                 <h3>4.75</h3>

@@ -45,12 +45,20 @@
                     height: 40px;
                     padding: 25px;
                     gap: 10px;
+                    color: #332859;
                     img{
                         width: 1fr;
                     }
-                    #b{
+                    a{
+                        display: flex;
+                        justify-content: center;
                         grid-row: span 2;
                         background-color: #332859;
+                        align-items: center;
+                        border: none;
+                    }
+                    #b{
+                        background-color: transparent;
                         border: none;
                         color: white;
                         font-size: 18px;
