@@ -109,19 +109,19 @@ function Homepage() {
               <p>Get 50% OFF For All Courses</p>
               <div id="clockdiv">
                 <div>
-                  <span class="days"></span>
+                  <span class="days">229</span>
                   <div class="text">Days</div>
                 </div>
                 <div>
-                  <span class="hours"></span>
+                  <span class="hours">23</span>
                   <div class="text">Hours</div>
                 </div>
                 <div>
-                  <span class="minutes"></span>
+                  <span class="minutes">59</span>
                   <div class="text">Minutes</div>
                 </div>
                 <div>
-                  <span class="seconds"></span>
+                  <span class="seconds">59</span>
                   <div class="text">Seconds</div>
                 </div>
               </div>
