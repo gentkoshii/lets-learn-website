@@ -38,6 +38,52 @@
                     width: 18px;
                 }
             }
+            .navbarIcon {
+                display: none;
+                z-index: 999;
+                &.active{
+                    z-index: 999;
+                }
+    
+                @include sm {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+    
+                    img {
+                        height: 30px;
+                        width: 30px;
+                    }
+                }
+            }
+            .navbarMenu {
+                display: none;
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                right: -50%;
+                background-color: black;
+                height: 100vh;
+                width: 50%;
+                a{
+                    color: white;
+                    &:active{
+                        color: red;
+                    }
+                }
+    
+                &.active {
+                    display: initial;
+                    transition: all 1s ease;
+                    right: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                }
+            }
         }
     }
 }
