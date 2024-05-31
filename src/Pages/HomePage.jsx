@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import "./HomePage.scss";
 
@@ -12,6 +11,26 @@ const cardData = [
 ];
 
 function Homepage() {
+  const [formData, setFormData] = useState({
+    name: "",
+    lname: "",
+    phone: "",
+    email: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+  };
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const cardsPerPage = 3;
 
@@ -102,7 +121,7 @@ function Homepage() {
           </button>
         </div>
         <div className="view-all">
-          <a href="/Courses">
+          <a href="/Contact">
             <button>GET STARTED</button>
           </a>
         </div>
@@ -131,12 +150,12 @@ function Homepage() {
                 </div>
               </div>
               <div id="form">
-                <form>
-                  <input type="text" placeholder="FIRST NAME*" />
-                  <input type="text" placeholder="LAST NAME*" />
-                  <input type="tel" placeholder="PHONE*" />
-                  <input type="email" placeholder="EMAIL*" />
-                  <a href="Courses">
+                <form onSubmit={handleSubmit}>
+                  <input type="text" name="name" placeholder="FIRST NAME*" value={formData.name} onChange={handleChange} />
+                  <input type="text" name="lname" placeholder="LAST NAME*" value={formData.lname} onChange={handleChange}/>
+                  <input type="tel" name="phone" placeholder="PHONE*" value={formData.phone} onChange={handleChange}/>
+                  <input type="email" name="email" placeholder="EMAIL*" value={formData.email} onChange={handleChange}/>
+                  <a href="/">
                     <button>
                       GET IT NOW
                     </button>
