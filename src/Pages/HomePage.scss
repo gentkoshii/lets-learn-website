@@ -34,12 +34,18 @@
         width: 200px;
         background-color: #332859;
         text-decoration: none;
+        cursor: pointer;
+        &:hover{
+          background-color: #4b3e7c;
+        }
         
         button {
           border: none;
           background-color: transparent;
           color: white;
           font-size: 16px;
+          cursor: pointer;
+
         }
       }
     }
@@ -111,10 +117,15 @@
 
       .prev,
       .next {
-        background-color: #332859;
-        color: white;
+        background-color: transparent;
+        color: #332859;
         border: none;
+        font-size: 22px;
         padding: 10px;
+        cursor: pointer;
+        &:hover{
+          font-size: 24px;
+        }
       }
 
       .cards {
@@ -270,10 +281,16 @@
             background-color: #332859;
             border-radius: 5px;
             text-decoration: none;
+            cursor: pointer;
+            &:hover{
+              background-color: #4b3e7c;
+            }
             button {
                 background-color: transparent;
                 border: none;
                 color: white;
+                cursor: pointer;
+                
             }
           }
         }

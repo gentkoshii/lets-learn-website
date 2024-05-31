@@ -22,8 +22,9 @@
             a{
                 padding:0px 30px 0px 0px;
                 color: #332859;
+                cursor: pointer;
                 &:hover{
-                    color: #332859;
+                    color: #5a4d8a;
                 }
                 &.active{
                     color: red;

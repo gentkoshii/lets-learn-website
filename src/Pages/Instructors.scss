@@ -26,6 +26,9 @@
             gap: 5px;
             a {
                 color: red;
+                &:hover{
+                    text-decoration: underline;
+                }
             }
         }
         .instructors-cards{
@@ -56,6 +59,10 @@
                         background-color: #332859;
                         align-items: center;
                         border: none;
+                        cursor: pointer;
+                        &:hover{
+                          background-color: #4b3e7c;
+                        }
                     }
                     #b{
                         background-color: transparent;
@@ -63,6 +70,7 @@
                         color: white;
                         font-size: 18px;
                         font-weight: bold;
+                        cursor: pointer;
                     }
                     #p{
                         padding-top: 20px;
@@ -94,6 +102,10 @@
                 color: white;
                 border: none;
                 font-weight: 800;
+                cursor: pointer;
+                &:hover{
+                  background-color: #4b3e7c;
+                }
 
                 &:active {
                     scale: 1.02;

@@ -34,6 +34,9 @@
             gap: 5px;
             a{
                 color: red;
+                &:hover{
+                    text-decoration: underline;
+                }
             }
         }
         .stats{
@@ -105,6 +108,10 @@
                 color: white;
                 border: none;
                 font-weight: 800;
+                cursor: pointer;
+                &:hover{
+                  background-color: #4b3e7c;
+                }
                 &:active{
                     scale: 1.02;
                     transition: ease 0.3s;

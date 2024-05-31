@@ -21,6 +21,9 @@
             gap: 5px;
             a{
                 color: red;
+                &:hover{
+                  text-decoration: underline;
+                }
             }
         }
   
@@ -181,6 +184,10 @@
                         border: none;
                         background-color: #332859;
                         color: white;
+                        cursor: pointer;
+                        &:hover{
+                          background-color: #4b3e7c;
+                        }
                     }
                 }
 

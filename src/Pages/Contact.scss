@@ -25,6 +25,9 @@
             gap: 5px;
             a {
                 color: red;
+                &:hover{
+                    text-decoration: underline;
+                }
             }
         }
 
@@ -70,6 +73,9 @@
                 a {
                     font-size: 18px;
                     color: #332859;
+                    &:hover{
+                    text-decoration: underline;
+                    }
                 }
             }
         }
@@ -104,6 +110,10 @@
                     background-color: #332859;
                     border: none;
                     color: white;
+                    cursor: pointer;
+                    &:hover{
+                      background-color: #4b3e7c;
+                    }
                 }
             }
         }
@@ -131,6 +141,10 @@
                 color: white;
                 border: none;
                 font-weight: 800;
+                cursor: pointer;
+                &:hover{
+                  background-color: #4b3e7c;
+                }
 
                 &:active {
                     scale: 1.02;
