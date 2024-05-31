@@ -101,6 +101,11 @@ function Homepage() {
             &gt;
           </button>
         </div>
+        <div className="view-all">
+          <a href="/Courses">
+            <button>GET STARTED</button>
+          </a>
+        </div>
       </div>
 
       <div className="countdown">

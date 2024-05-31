@@ -112,6 +112,7 @@
       align-items: center;
       justify-content: center;
       width: 100%;
+      padding: 20px;
       overflow: hidden;
       position: relative;
 
@@ -208,6 +209,28 @@
             }
           }
         }
+      }
+    }
+    .view-all{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60px;
+      width: 200px;
+      background-color: #332859;
+      text-decoration: none;
+      cursor: pointer;
+      &:hover{
+        background-color: #4b3e7c;
+      }
+      
+      button {
+        border: none;
+        background-color: transparent;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+
       }
     }
   }
