@@ -56,15 +56,15 @@ function Courses() {
           <aside>
             <div className="categories">
               <h2>Categories</h2>
-              <a href="/Courses">&gt; Design(2)</a>
-              <a href="/Courses">&gt; Web Development(4)</a>
-              <a href="/Courses" className="web">&gt; Data Science(4)</a>
-              <a href="/Courses" className="web">&gt; Mobile Development(3)</a>
-              <a href="/Courses" className="web">&gt; Software Testing(3)</a>
-              <a href="/Courses" className="web">&gt; Development Tools(3)</a>
-              <a href="/Courses">&gt; Personal Development(3)</a>
-              <a href="/Courses">&gt; Business(2)</a>
-              <a href="/Courses">&gt; Photography(1)</a>
+              <a href="/Courses"><span>&gt;</span> Design(2)</a>
+              <a href="/Courses"><span>&gt;</span> Web Development(4)</a>
+              <a href="/Courses" className="web"><span>&gt;</span> Data Science(4)</a>
+              <a href="/Courses" className="web"><span>&gt;</span> Mobile Development(3)</a>
+              <a href="/Courses" className="web"><span>&gt;</span> Software Testing(3)</a>
+              <a href="/Courses" className="web"><span>&gt;</span> Development Tools(3)</a>
+              <a href="/Courses"><span>&gt;</span> Personal Development(3)</a>
+              <a href="/Courses"><span>&gt;</span> Business(2)</a>
+              <a href="/Courses"><span>&gt;</span> Photography(1)</a>
             </div>
 
             <div className="latest">
