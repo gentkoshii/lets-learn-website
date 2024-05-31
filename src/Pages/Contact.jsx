@@ -1,7 +1,28 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Contact.scss";
 
 function Contact() {
+  const [formData, setFormData] = useState({
+    	    name: "",
+    	    phone: "",
+    	    email: "",
+    	    subject: "",
+    	    message: ""
+    	  });
+    	
+    	  const handleChange = (e) => {
+    	    const { name, value } = e.target;
+    	    setFormData((prevData) => ({
+    	      ...prevData,
+    	      [name]: value
+    	    }));
+    	  };
+    	
+    	  const handleSubmit = (e) => {
+    	    e.preventDefault();
+    	    console.log(formData);
+  	    };
   return (
     <div className="Contact">
       <div className="Intro">
@@ -41,12 +62,12 @@ function Contact() {
         </div>
         <div className="form">
           <h2>Send a Message</h2>
-          <form>
-            <input type="text" placeholder="Your Name" />
-            <input type="tel" placeholder="Phone Number" />
-            <input type="text" placeholder="Your Email" />
-            <input type="text" placeholder="Subject" />
-            <input type="text" placeholder="Your Message" />
+          <form onSubmit={handleSubmit}>
+            <input type="text" name="name"  placeholder="Your Name" value={formData.name} onChange={handleChange}/>
+            <input type="tel" name="phone"  placeholder="Phone Number" value={formData.phone} onChange={handleChange} />
+            <input type="text" name="email"  placeholder="Your Email" value={formData.email} onChange={handleChange} />
+            <input type="text" name="subject"  placeholder="Subject" value={formData.subject}  onChange={handleChange} />
+            <input type="text" name="message"  placeholder="Your Message" value={formData.message} onChange={handleChange} />
             <input type="submit" id="Submit" value="Send a Message" />
           </form>
         </div>
