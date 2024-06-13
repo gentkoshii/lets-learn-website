@@ -46,6 +46,7 @@ function Homepage() {
     }
   };
 
+  const top = () => (window.scrollTo(0, 0))
   return (
     <div className="Homepage">
 
@@ -248,6 +249,12 @@ function Homepage() {
                 </div>
               </div>
             </div>
+      </div>
+
+      <div className="topbtn">
+        <button onClick={top}>
+          <img src="./public/top.png" alt="up-arrow" />
+        </button>
       </div>
 
     </div>
