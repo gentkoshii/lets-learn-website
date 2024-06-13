@@ -10,6 +10,8 @@ function Contact() {
     	    subject: "",
     	    message: ""
     	  });
+
+        const [errors, setErrors] = useState({})
     	
     	  const handleChange = (e) => {
     	    const { name, value } = e.target;
@@ -21,8 +23,34 @@ function Contact() {
     	
     	  const handleSubmit = (e) => {
     	    e.preventDefault();
+          const validationErrors = {}
+          if(!formData.name.trim()) {
+              validationErrors.name = "name is required"
+          }
+        
+          if(!formData.email.trim()) {
+              validationErrors.email = "email is required"
+          } else if(!/\S+@\S+\.\S+/.test(formData.email)){
+              validationErrors.email = "email is not valid"
+          }
+
+          if(!formData.subject.trim()) {
+            validationErrors.subject = "subject is required"
+          }
+
+          if(!formData.message.trim()) {
+            validationErrors.message = "message is required"
+          }
+
+          setErrors(validationErrors)
+
+          if(Object.keys(validationErrors).length === 0) {
+            alert("Form Submitted successfully")
+        }
+
     	    console.log(formData);
   	    };
+
   return (
     <div className="Contact">
       <div className="Intro">
@@ -64,10 +92,14 @@ function Contact() {
           <h2>Send a Message</h2>
           <form onSubmit={handleSubmit}>
             <input type="text" name="name"  placeholder="Your Name" value={formData.name} onChange={handleChange}/>
+            {errors.name && <span>{errors.name}</span>}
             <input type="tel" name="phone"  placeholder="Phone Number" value={formData.phone} onChange={handleChange} />
             <input type="text" name="email"  placeholder="Your Email" value={formData.email} onChange={handleChange} />
+            {errors.email && <span>{errors.email}</span>}
             <input type="text" name="subject"  placeholder="Subject" value={formData.subject}  onChange={handleChange} />
+            {errors.subject && <span>{errors.subject}</span>}
             <input type="text" name="message"  placeholder="Your Message" value={formData.message} onChange={handleChange} />
+            {errors.message && <span>{errors.message}</span>}
             <input type="submit" id="Submit" value="Send a Message" />
           </form>
         </div>
