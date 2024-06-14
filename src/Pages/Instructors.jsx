@@ -1,7 +1,21 @@
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Instructors.scss";
 
 function Instructors() {
+  
+  const [images, setImages] = useState([]);
+
+  useEffect(() => {
+    Promise.all(
+      Array.from({ length: 5 }).map(() =>
+        fetch("https://picsum.photos/200")
+          .then((response) => response.url)
+          .catch((error) => console.error("Error fetching image:", error))
+      )
+    ).then((imageUrls) => setImages(imageUrls));
+  }, []);
+
   return (
     <div className="Instructors">
       <div className="Intro">
@@ -16,9 +30,9 @@ function Instructors() {
         </div>
 
         <div className="instructors-cards">
-          {Array.from({ length: 5 }).map((_, index) => (
+          {images.map((image, index) => (
             <div className="card" key={index}>
-              <img src="./public/avatar3.jpg" alt="Avatar" />
+              <img src={image} alt="Avatar" />
               <div className="details">
                 <p>Full Name</p>
                 <p>Available Courses</p>
