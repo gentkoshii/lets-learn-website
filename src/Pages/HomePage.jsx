@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./HomePage.scss";
 
 const cardData = [
@@ -9,6 +9,12 @@ const cardData = [
   { id: 5, instructor: "Chris Davis", courseName: "Course Name Example", students: 567, comments: 56, price: 50 },
   { id: 6, instructor: "Patricia Wilson", courseName: "Course Name Example", students: 678, comments: 67, price: 35 },
 ];
+
+const quotesData = [
+  { id: 1, text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam optio quis, repudiandae atque eos ipsa, odio alias dolorum explicabo neque praesentium doloribus eligendi. Fugiat pariatur, maiores neque consequatur numquam facere?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam tempore hic, consectetur, earum maiores vitae dolorem sed sapiente magnam voluptatibus explicabo quia itaque sequi minima quam? Aut earum molestias blanditiis.", author: "John Smith", avatar: "./public/avatar1.jpg" },
+  { id: 2, text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam optio quis, repudiandae atque eos ipsa, odio alias dolorum explicabo neque praesentium doloribus eligendi. Fugiat pariatur, maiores neque consequatur numquam facere?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam tempore hic, consectetur, earum maiores vitae dolorem sed sapiente magnam voluptatibus explicabo quia itaque sequi minima quam? Aut earum molestias blanditiis.", author: "Jane Doe", avatar: "./public/avatar2.jpg" },
+];
+
 
 function Homepage() {
   const [formData, setFormData] = useState({
@@ -46,12 +52,37 @@ function Homepage() {
     }
   };
 
+  const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
+  const quotesPerPage = 1;
+
+  const handleNextQuote = () => {
+    if (currentQuoteIndex < quotesData.length - quotesPerPage) {
+      setCurrentQuoteIndex(currentQuoteIndex + quotesPerPage);
+    }
+  };
+
+  const handlePrevQuote = () => {
+    if (currentQuoteIndex > 0) {
+      setCurrentQuoteIndex(currentQuoteIndex - quotesPerPage);
+    }
+  };
+
+  const [currentIntroIndex, setCurrentIntroIndex] = useState(0);
+  const introImages = ["./public/ed-slide.png", "./public/ed-slide-2-1.png"];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIntroIndex((prevIndex) => (prevIndex + 1) % introImages.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [introImages.length]);
+
   const top = () => (window.scrollTo(0, 0))
   return (
     <div className="Homepage">
 
       <div className="Intro">
-        <img src="./public/ed-slide.png" alt="Client" />
+        <img src={introImages[currentIntroIndex]} alt="Client" />
         <div className="lets-learn">
           <h1># lets Learn</h1>
           <p>Complete Solution For Your Education Needs!</p>
@@ -169,10 +200,24 @@ function Homepage() {
       </div>
 
       <div className="quotes">
-            <h1>What Students Say</h1>
-            <img src="./public/avatar1.jpg" alt="Student" />
-            <p><span>"</span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam optio quis, repudiandae atque eos ipsa, odio alias dolorum explicabo neque praesentium doloribus eligendi. Fugiat pariatur, maiores neque consequatur numquam facere?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam tempore hic, consectetur, earum maiores vitae dolorem sed sapiente magnam voluptatibus explicabo quia itaque sequi minima quam? Aut earum molestias blanditiis.<span>"</span></p>
-            <h4>John Smith</h4>
+        <h1>What Students Say</h1>
+        <div className="quote-navigation">
+          <button className="prev" onClick={handlePrevQuote} disabled={currentQuoteIndex === 0}>
+            &lt;
+          </button>
+          <div className="quote-content">
+            {quotesData.slice(currentQuoteIndex, currentQuoteIndex + quotesPerPage).map((quote) => (
+              <div key={quote.id} className="quote">
+                <img src={quote.avatar} alt="Student" />
+                <p><span>"</span>{quote.text}<span>"</span></p>
+                <h4>{quote.author}</h4>
+              </div>
+            ))}
+          </div>
+          <button className="next" onClick={handleNextQuote} disabled={currentQuoteIndex >= quotesData.length - quotesPerPage}>
+            &gt;
+          </button>
+        </div>
       </div>
 
       <div className="latest">
