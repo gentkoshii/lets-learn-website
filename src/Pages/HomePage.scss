@@ -3,6 +3,36 @@
 .Homepage {
   width: 100%;
 
+  .welcome{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #332859;
+    button{
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding-right: 150px;
+      border: none;
+      background-color: transparent;
+      color: rgb(255, 88, 88);
+      cursor: pointer;
+      &:hover{
+        text-decoration: underline;
+      }
+      &:active{
+        color: rgb(231, 70, 70);
+        text-decoration: none;
+      }
+    }
+  }
+
   .Intro {
     background-image: url(./public/background.jpg);
     background-size: cover;

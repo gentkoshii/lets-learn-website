@@ -15,7 +15,7 @@ const quotesData = [
   { id: 2, text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam optio quis, repudiandae atque eos ipsa, odio alias dolorum explicabo neque praesentium doloribus eligendi. Fugiat pariatur, maiores neque consequatur numquam facere?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam tempore hic, consectetur, earum maiores vitae dolorem sed sapiente magnam voluptatibus explicabo quia itaque sequi minima quam? Aut earum molestias blanditiis.", author: "Jane Doe", avatar: "./public/avatar2.jpg" },
 ];
 
-
+  //Paraqitja e vlerave ne console te kontakt formes//
 function Homepage() {
   const [formData, setFormData] = useState({
     name: "",
@@ -37,6 +37,7 @@ function Homepage() {
     console.log(formData);
   };
 
+  //Butoni per ndryshimin e pjeses se div popular courses//
   const [currentIndex, setCurrentIndex] = useState(0);
   const cardsPerPage = 3;
 
@@ -51,7 +52,9 @@ function Homepage() {
       setCurrentIndex(currentIndex - cardsPerPage);
     }
   };
+  //End Butoni per ndryshimin e pjeses se div popular courses//
 
+  //Butoni per ndryshimin e pjeses se div te student quotes//
   const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
   const quotesPerPage = 1;
 
@@ -66,7 +69,9 @@ function Homepage() {
       setCurrentQuoteIndex(currentQuoteIndex - quotesPerPage);
     }
   };
+  //End Butoni per ndryshimin e pjeses se div te student quotes//
 
+  //Ndryshimi automatik i fotografice ne intro//
   const [currentIntroIndex, setCurrentIntroIndex] = useState(0);
   const introImages = ["./public/ed-slide.png", "./public/ed-slide-2-1.png"];
 
@@ -76,10 +81,32 @@ function Homepage() {
     }, 3000);
     return () => clearInterval(interval);
   }, [introImages.length]);
+  //End Ndryshimi automatik i fotografice ne intro//
 
+  //Local Storage//
+  const [showWelcome, setShowWelcome] = useState(() => {
+    const savedState = window.localStorage.getItem('Welcome_App');
+    return savedState !== null ? JSON.parse(savedState) : true;
+  });
+
+  useEffect(() => {
+    window.localStorage.setItem('Welcome_App', JSON.stringify(showWelcome));
+  }, [showWelcome]);
+  //End Local Storage//
+
+  //Butoni per scroll to top//
   const top = () => (window.scrollTo(0, 0))
+  //End Butoni per scroll to top//
+
   return (
     <div className="Homepage">
+
+      {showWelcome && (
+      <div className="welcome">
+        <button onClick={() => setShowWelcome(false)}>Hide</button>
+        <h1>Welcome to the best learning website!</h1>
+      </div>
+      )}
 
       <div className="Intro">
         <img src={introImages[currentIntroIndex]} alt="Client" />
