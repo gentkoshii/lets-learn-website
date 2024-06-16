@@ -370,7 +370,19 @@
     gap: 15px;
     padding: 20px 0px;
     background-color: #fff;
-
+    .quote-navigation{
+      display: flex;
+      button{
+        background-color: transparent;
+        border: none;
+        color: #332859;
+        font-size: 22px;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+      
+    }
     h1 {
       font-size: 24px;
       color: #332859;
