@@ -6,7 +6,6 @@ import {
 } from 'react-router-dom';
 import App from './App';
 import Layout from './Layout'; 
-import Homepage from './Pages/HomePage';
 import About from './Pages/About';
 import Courses from './Pages/Courses';
 import Instructors from './Pages/Instructors';

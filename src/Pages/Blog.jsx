@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import "./Blog.scss";
-
+import Card from "../Components/blogCard";
 
 function Blog() {
   return (
@@ -12,6 +12,9 @@ function Blog() {
         <Link to="/">Home</Link>
         <p>&gt;</p>
         <p>Blog</p>
+        <div>
+          <Card/>
+        </div>
       </div>
     </div>
 )
